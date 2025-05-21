@@ -1,0 +1,25 @@
+{
+    "questions": [
+        {
+            "question": "What is 1 + 1?",
+            "answer": "2",
+            "point_value": 2
+        },
+        {
+            "question": "What is the capital of Georgia?",
+            "choice1": "Macon",
+            "choice2": "Atlanta",
+            "choice3": "Augusta",
+            "choice4": "Savannah",
+            "answer": "Atlanta",
+            "point_value": 1
+        },
+        {
+            "question": "The Earth is flat.",
+            "choice1": true,
+            "choice2": false,
+            "answer": true,
+            "point_value": 1
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhhp86dl2t5fk"]
+
+[ext_resource type="Script" uid="uid://olkad0wuc66b" path="res://Scripts/question_box.gd" id="1_1uw45"]
+
+[sub_resource type="Theme" id="Theme_1uw45"]
+ItemList/colors/font_color = Color(1, 1, 1, 1)
+ItemList/colors/font_hovered_selected_color = Color(0.40642, 0.40642, 0.40642, 1)
+ItemList/colors/guide_color = Color(0.7, 0.7, 0.7, 0.164)
+
+[node name="QuestionBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1uw45")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Question" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036
+anchor_top = 0.086
+anchor_right = 0.036
+anchor_bottom = 0.086
+offset_left = -0.472004
+offset_top = 0.271999
+offset_right = 1057.53
+offset_bottom = 50.272
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+
+[node name="AnswerList" type="ItemList" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036
+anchor_top = 0.187
+anchor_right = 0.036
+anchor_bottom = 0.187
+offset_left = -0.472004
+offset_top = -0.176003
+offset_right = 1057.53
+offset_bottom = 91.824
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1uw45")
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036
+anchor_top = 0.361
+anchor_right = 0.036
+anchor_bottom = 0.361
+offset_left = -0.472004
+offset_top = 0.0719757
+offset_right = 1057.53
+offset_bottom = 49.072
+text = "Restart"

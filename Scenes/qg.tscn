@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://c80v2vgiebc6s"]
+
+[ext_resource type="Script" uid="uid://b283ra8jic736" path="res://Scripts/qg.gd" id="1_mmt5l"]
+[ext_resource type="PackedScene" uid="uid://dykpegq6mjtvp" path="res://Scenes/player.tscn" id="2_mmt5l"]
+[ext_resource type="PackedScene" uid="uid://tcnve6bvg0am" path="res://Scenes/helper.tscn" id="3_fgdfb"]
+[ext_resource type="PackedScene" uid="uid://bd5o2q0nh5lb4" path="res://Scenes/question_boxes.tscn" id="4_yqty0"]
+
+[node name="QG" type="Node2D"]
+script = ExtResource("1_mmt5l")
+
+[node name="Player" parent="." instance=ExtResource("2_mmt5l")]
+
+[node name="Helper" parent="." instance=ExtResource("3_fgdfb")]
+
+[node name="QuestionBoxes" parent="." instance=ExtResource("4_yqty0")]

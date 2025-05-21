@@ -1,0 +1,10 @@
+PLAYER ANSWER INPUT:
+	1. check that ItemList item is selected
+	2. return true if any item is selected
+	3. return item index
+
+CHECK IF PLAYER ANSWER INPUT MATCHES JSON INDEX:
+	1. check player input against correct json index
+	2. if match, increase player score
+		- 
+	3. if not match, reload current question?

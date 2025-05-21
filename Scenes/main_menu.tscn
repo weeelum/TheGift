@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtyqpiks1570y"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dx1m02v5e5hpd" path="res://Assets/DesktopIcons/game_controller_2.png" id="1_hjcrg"]
+[ext_resource type="Texture2D" uid="uid://dud5tlc4h0n0d" path="res://Assets/DesktopIcons/folder_v1.png" id="2_48xlc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1ehe0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 1, 1, 1)
+metadata/_edit_lock_ = true
+
+[node name="QGIcon" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 1943.0
+offset_right = 264.0
+offset_bottom = 2158.0
+grow_vertical = 2
+pivot_offset = Vector2(107.5, 107.5)
+
+[node name="QGButton" type="Button" parent="QGIcon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0419641
+anchor_top = -4.71268
+anchor_right = 0.378687
+anchor_bottom = -4.32768
+offset_left = -71.76
+offset_top = -65.8298
+offset_right = 71.8
+offset_bottom = 66.395
+scale = Vector2(0.383843, 0.385519)
+pivot_offset = Vector2(116.5, 107)
+theme_override_font_sizes/font_size = 30
+text = "Question Game"
+icon = ExtResource("1_hjcrg")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="FolderIcon" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FolderButton" type="Button" parent="FolderIcon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.75044
+anchor_top = 23.2426
+anchor_right = 7.19744
+anchor_bottom = 25.3146
+offset_left = -71.8
+offset_top = -66.76
+offset_right = 63.32
+offset_bottom = 65.36
+scale = Vector2(0.383843, 0.385519)
+pivot_offset = Vector2(116.5, 107.5)
+theme_override_font_sizes/font_size = 30
+text = "Files"
+icon = ExtResource("2_48xlc")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsIcon" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3148.0
+offset_top = 2133.0
+offset_right = 3188.0
+offset_bottom = 2173.0
+
+[node name="TextFileIcon" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2994.0
+offset_top = 2133.0
+offset_right = 3034.0
+offset_bottom = 2173.0
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3073.0
+offset_top = 2133.0
+offset_right = 3113.0
+offset_bottom = 2173.0
+
+[connection signal="pressed" from="QGIcon/QGButton" to="." method="_on_qg_button_pressed"]
+[connection signal="button_down" from="FolderIcon/FolderButton" to="FolderIcon" method="_on_folder_button_button_down"]
+[connection signal="button_up" from="FolderIcon/FolderButton" to="FolderIcon" method="_on_folder_button_button_up"]

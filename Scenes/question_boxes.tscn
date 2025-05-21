@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd5o2q0nh5lb4"]
+
+[ext_resource type="Script" uid="uid://dhdi12utgmiqw" path="res://Scripts/question_boxes.gd" id="1_pvc5j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvc5j"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[node name="QuestionBoxes" type="CanvasLayer"]
+script = ExtResource("1_pvc5j")
+
+[node name="QuestionControl" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.204
+anchor_top = 0.212
+anchor_right = 0.796
+anchor_bottom = 0.788
+offset_left = 0.475952
+offset_top = -0.608032
+offset_right = -0.476318
+offset_bottom = 0.60791
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1022.5, 644)
+
+[node name="Background" type="ColorRect" parent="QuestionControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1022.5, 644)
+color = Color(0.20871, 0.20871, 0.20871, 1)
+
+[node name="Question" type="Label" parent="QuestionControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.075665
+anchor_top = 0.252168
+anchor_right = 0.552665
+anchor_bottom = 0.317168
+offset_left = -0.235016
+offset_top = 0.207993
+offset_right = -0.699951
+offset_bottom = 0.487976
+pivot_offset = Vector2(487.5, 42)
+theme_override_colors/font_color = Color(1, 0.478431, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Press 's' to begin!"
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerList" type="ItemList" parent="QuestionControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 0.346273
+anchor_right = 0.935445
+anchor_bottom = 0.582
+offset_left = -0.420074
+offset_top = 4.0
+offset_right = -2.98511
+offset_bottom = 0.383667
+pivot_offset = Vector2(877.5, 150)
+theme_override_colors/font_color = Color(1, 0.478431, 0, 1)
+theme_override_font_sizes/font_size = 50
+auto_height = true
+item_count = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="NextQuestion" type="Button" parent="QuestionControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0756895
+anchor_top = 0.610155
+anchor_right = 0.261782
+anchor_bottom = 0.678578
+offset_left = 0.214981
+offset_top = 0.119934
+offset_right = 0.655029
+offset_bottom = -0.00805664
+pivot_offset = Vector2(190.5, 44)
+theme_override_colors/font_color = Color(1, 0.478431, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_pvc5j")
+text = "Next Question"
+metadata/_edit_use_anchors_ = true
+
+[node name="Restart" type="Button" parent="QuestionControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 22.45
+anchor_top = 10.85
+anchor_right = 22.75
+anchor_bottom = 10.975
+offset_left = -6.10352e-05
+offset_right = 171.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(1, 0.478431, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" type="Label" parent="QuestionControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.820533
+anchor_top = 0.0803665
+anchor_right = 0.936533
+anchor_bottom = 0.140366
+offset_left = 0.509888
+offset_top = -0.512016
+offset_right = -0.710083
+offset_bottom = 0.207993
+pivot_offset = Vector2(118, 39)
+theme_override_colors/font_color = Color(1, 0.478431, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

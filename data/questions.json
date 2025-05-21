@@ -1,0 +1,22 @@
+{
+	"questions": [
+		{
+			"question": "What is 1 + 1?",
+			"answers": ["2", "10", "3", "69"],
+			"correct_idx": 0,
+			"point_value": 2
+		},
+		{
+			"question": "What is the capital of Georgia?",
+			"answers": ["Macon", "Atlanta", "Augusta", "Savannah"],
+			"correct_idx": 1,
+			"point_value": 1
+		},
+		{
+			"question": "The Earth is flat.",
+			"answers": ["True", "False", "Unsure", "???"],
+			"correct_idx": 0,
+			"point_value": 1
+		}
+	]
+}
