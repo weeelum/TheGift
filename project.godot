@@ -15,6 +15,10 @@ run/main_scene="uid://dvfpiu20h7het"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+TimeManager="*res://Scripts/TimeManager.gd"
+
 [display]
 
 window/size/viewport_width=1920

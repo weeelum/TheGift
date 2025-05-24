@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtyqpiks1570y"]
+[gd_scene load_steps=10 format=3 uid="uid://dtyqpiks1570y"]
 
 [ext_resource type="Script" uid="uid://kyc56brth42s" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://dx1m02v5e5hpd" path="res://Assets/DesktopIcons/game_controller_2.png" id="1_hjcrg"]
@@ -11,6 +11,8 @@
 bg_color = Color(0.308769, 0.308769, 0.308769, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_opfnp"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -122,7 +124,7 @@ anchor_bottom = 0.821296
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
-text = "Files"
+text = "Journal"
 icon = ExtResource("4_ce3w2")
 flat = true
 icon_alignment = 1
@@ -180,5 +182,24 @@ layout_mode = 2
 size_flags_horizontal = 0
 text = "Credits"
 flat = true
+
+[node name="VSeparator" type="VSeparator" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 16.0
+
+[node name="Date" type="Label" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_opfnp")
+horizontal_alignment = 1
+
+[node name="Time" type="Label" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_opfnp")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/BtnCtrls/QGBtn" to="." method="_on_qg_button_pressed"]
