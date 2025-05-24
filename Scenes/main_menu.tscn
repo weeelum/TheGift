@@ -184,6 +184,7 @@ text = "Credits"
 flat = true
 
 [node name="VSeparator" type="VSeparator" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 16.0

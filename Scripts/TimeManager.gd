@@ -1,7 +1,7 @@
 extends Node
 
 # Time settings
-const MINUTES_PER_TICK := 10.0
+const MINUTES_PER_TICK := 5.0
 const SECONDS_PER_TICK := 1.0
 
 # Current in-game time
