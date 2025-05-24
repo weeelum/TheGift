@@ -1,49 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtyqpiks1570y"]
+[gd_scene load_steps=9 format=3 uid="uid://dtyqpiks1570y"]
 
-[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Script" uid="uid://kyc56brth42s" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://dx1m02v5e5hpd" path="res://Assets/DesktopIcons/game_controller_2.png" id="1_hjcrg"]
 [ext_resource type="Texture2D" uid="uid://dud5tlc4h0n0d" path="res://Assets/DesktopIcons/folder_v1.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://cn3w3xxyluv05" path="res://Assets/DesktopIcons/Globe_1.png" id="3_opfnp"]
+[ext_resource type="Texture2D" uid="uid://dtw8rsvhojax2" path="res://Assets/DesktopIcons/notebook_v1.png" id="4_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://dr7fnf5kqky3o" path="res://Assets/DesktopIcons/Messages.png" id="5_cp0ys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.308769, 0.308769, 0.308769, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_1ehe0")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0, 1, 1, 1)
+script = ExtResource("1_1ehe0")
 metadata/_edit_lock_ = true
 
-[node name="QGIcon" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 49.0
-offset_top = 1943.0
-offset_right = 264.0
-offset_bottom = 2158.0
-grow_vertical = 2
-pivot_offset = Vector2(107.5, 107.5)
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
 
-[node name="QGButton" type="Button" parent="QGIcon"]
+[node name="Background" type="ColorRect" parent="AspectRatioContainer"]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+color = Color(0.16, 0.16, 0.16, 1)
+metadata/_edit_lock_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="BtnCtrls" type="Control" parent="AspectRatioContainer/PanelContainer"]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+
+[node name="QGBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0419641
-anchor_top = -4.71268
-anchor_right = 0.378687
-anchor_bottom = -4.32768
-offset_left = -71.76
-offset_top = -65.8298
-offset_right = 71.8
-offset_bottom = 66.395
-scale = Vector2(0.383843, 0.385519)
-pivot_offset = Vector2(116.5, 107)
-theme_override_font_sizes/font_size = 30
-text = "Question Game"
+anchor_left = 0.0510417
+anchor_top = 0.821296
+anchor_right = 0.0510417
+anchor_bottom = 0.821296
+offset_right = 110.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 22
+text = "Quiz
+"
 icon = ExtResource("1_hjcrg")
 flat = true
 icon_alignment = 1
@@ -51,26 +60,34 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="FolderIcon" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="FolderButton" type="Button" parent="FolderIcon"]
+[node name="FolderBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 4.75044
-anchor_top = 23.2426
-anchor_right = 7.19744
-anchor_bottom = 25.3146
-offset_left = -71.8
-offset_top = -66.76
-offset_right = 63.32
-offset_bottom = 65.36
-scale = Vector2(0.383843, 0.385519)
-pivot_offset = Vector2(116.5, 107.5)
-theme_override_font_sizes/font_size = 30
+anchor_left = 0.246875
+anchor_top = 0.821296
+anchor_right = 0.246875
+anchor_bottom = 0.821296
+offset_right = 110.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 22
+text = "Browser"
+icon = ExtResource("3_opfnp")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.415625
+anchor_top = 0.825926
+anchor_right = 0.415625
+anchor_bottom = 0.825926
+offset_right = 110.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 22
 text = "Files"
 icon = ExtResource("2_48xlc")
 icon_alignment = 1
@@ -78,27 +95,90 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="SettingsIcon" type="Button" parent="."]
-layout_mode = 0
-offset_left = 3148.0
-offset_top = 2133.0
-offset_right = 3188.0
-offset_bottom = 2173.0
+[node name="TextFileBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.335417
+anchor_top = 0.825
+anchor_right = 0.335417
+anchor_bottom = 0.825
+offset_right = 110.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 22
+text = "Messages"
+icon = ExtResource("5_cp0ys")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
 
-[node name="TextFileIcon" type="Button" parent="."]
-layout_mode = 0
-offset_left = 2994.0
-offset_top = 2133.0
-offset_right = 3034.0
-offset_bottom = 2173.0
+[node name="CloseBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.151042
+anchor_top = 0.821296
+anchor_right = 0.151042
+anchor_bottom = 0.821296
+offset_right = 110.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 22
+text = "Files"
+icon = ExtResource("4_ce3w2")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
 
-[node name="CloseButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 3073.0
-offset_top = 2133.0
-offset_right = 3113.0
-offset_bottom = 2173.0
+[node name="MenuBar" type="MarginContainer" parent="AspectRatioContainer/PanelContainer"]
+custom_minimum_size = Vector2(1920, 50)
+layout_mode = 2
+size_flags_vertical = 0
 
-[connection signal="pressed" from="QGIcon/QGButton" to="." method="_on_qg_button_pressed"]
-[connection signal="button_down" from="FolderIcon/FolderButton" to="FolderIcon" method="_on_folder_button_button_down"]
-[connection signal="button_up" from="FolderIcon/FolderButton" to="FolderIcon" method="_on_folder_button_button_up"]
+[node name="MenuColor" type="ColorRect" parent="AspectRatioContainer/PanelContainer/MenuBar"]
+self_modulate = Color(1, 1, 1, 0.792157)
+custom_minimum_size = Vector2(1920, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0.305882, 0.396078, 0.796078, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/PanelContainer/MenuBar"]
+custom_minimum_size = Vector2(1920, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="NewGameBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+text = "New Game"
+flat = true
+
+[node name="LoadGameBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Load Game"
+flat = true
+
+[node name="SettingsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Settings"
+flat = true
+
+[node name="HelpBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Help"
+flat = true
+
+[node name="CreditsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Credits"
+flat = true
+
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/BtnCtrls/QGBtn" to="." method="_on_qg_button_pressed"]
