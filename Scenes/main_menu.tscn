@@ -35,21 +35,26 @@ layout_mode = 2
 color = Color(0.16, 0.16, 0.16, 1)
 metadata/_edit_lock_ = true
 
-[node name="PanelContainer" type="PanelContainer" parent="AspectRatioContainer"]
+[node name="PanelContainer" type="Panel" parent="AspectRatioContainer"]
+custom_minimum_size = Vector2(1920, 0)
 layout_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="BtnCtrls" type="Control" parent="AspectRatioContainer/PanelContainer"]
+[node name="Apps" type="Control" parent="AspectRatioContainer/PanelContainer"]
 custom_minimum_size = Vector2(1920, 0)
 layout_mode = 2
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
 
-[node name="QGBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+[node name="Quiz" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0510417
-anchor_top = 0.821296
-anchor_right = 0.0510417
-anchor_bottom = 0.821296
+anchor_left = 0.0239583
+anchor_top = 0.865741
+anchor_right = 0.0239583
+anchor_bottom = 0.865741
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
@@ -62,13 +67,13 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="FolderBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+[node name="Browser" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.246875
-anchor_top = 0.821296
-anchor_right = 0.246875
-anchor_bottom = 0.821296
+anchor_left = 0.219792
+anchor_top = 0.865741
+anchor_right = 0.219792
+anchor_bottom = 0.865741
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
@@ -80,13 +85,13 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="SettingsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+[node name="Files" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.415625
-anchor_top = 0.825926
-anchor_right = 0.415625
-anchor_bottom = 0.825926
+anchor_left = 0.388542
+anchor_top = 0.870371
+anchor_right = 0.388542
+anchor_bottom = 0.870371
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
@@ -97,13 +102,13 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="TextFileBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+[node name="Messages" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.335417
-anchor_top = 0.825
-anchor_right = 0.335417
-anchor_bottom = 0.825
+anchor_left = 0.308334
+anchor_top = 0.869445
+anchor_right = 0.308854
+anchor_bottom = 0.869445
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
@@ -114,13 +119,13 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CloseBtn" type="Button" parent="AspectRatioContainer/PanelContainer/BtnCtrls"]
+[node name="Journal" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.151042
-anchor_top = 0.821296
-anchor_right = 0.151042
-anchor_bottom = 0.821296
+anchor_left = 0.123959
+anchor_top = 0.865741
+anchor_right = 0.123959
+anchor_bottom = 0.865741
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
@@ -135,7 +140,10 @@ metadata/_edit_use_anchors_ = true
 [node name="MenuBar" type="MarginContainer" parent="AspectRatioContainer/PanelContainer"]
 custom_minimum_size = Vector2(1920, 50)
 layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 50.0
 size_flags_vertical = 0
+metadata/_edit_lock_ = true
 
 [node name="MenuColor" type="ColorRect" parent="AspectRatioContainer/PanelContainer/MenuBar"]
 self_modulate = Color(1, 1, 1, 0.792157)
@@ -203,4 +211,5 @@ size_flags_horizontal = 3
 label_settings = SubResource("LabelSettings_opfnp")
 horizontal_alignment = 1
 
-[connection signal="pressed" from="AspectRatioContainer/PanelContainer/BtnCtrls/QGBtn" to="." method="_on_qg_button_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/Quiz" to="." method="_on_qg_button_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/Messages" to="." method="_on_messages_pressed"]

@@ -7,9 +7,9 @@ const SECONDS_PER_TICK := 1.0
 # Current in-game time
 var hour := 6
 var minute := 0
-var month := 1
+var month := 6
 var day := 1
-var year := 1
+var year := 2006
 
 # Internal timer
 var _tick_timer := 0.0
@@ -40,4 +40,4 @@ func get_time_string() -> String:
 	return "%02d:%02d" % [hour, minute]
 
 func get_date_string() -> String:
-	return "%02d/%02d/%02d" % [month, day, year]
+	return "%02d/%02d/%4d" % [month, day, year]
