@@ -46,7 +46,7 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Close" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/TopLeftMenu"]
+[node name="CloseBtn" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/TopLeftMenu"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Close"
@@ -77,13 +77,14 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 theme = SubResource("Theme_ellov")
+theme_override_font_sizes/font_size = 20
 text = "Alex"
-alignment = 0
 
 [node name="Mom" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/Contacts/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
+theme_override_font_sizes/font_size = 20
 text = "Mom"
 
 [node name="Contact3" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/Contacts/VBoxContainer"]

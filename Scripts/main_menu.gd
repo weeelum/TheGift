@@ -5,12 +5,14 @@ extends Control
 
 var quiz_game : Node2D = preload("res://Scenes/qg.tscn").instantiate()
 var message_app : Control = preload("res://Scenes/message_app.tscn").instantiate()
+var vbay_app : Control = preload("res://Scenes/vbay_app.tscn").instantiate()
 
 
 func _ready() -> void:
 	TimeManager.time_updated.connect(_on_time_updated)
 	TimeManager.date_updated.connect(_on_date_updated)
 	message_app.close_requested.connect(_on_close_message_app)
+	vbay_app.close_requested.connect(_on_close_v_bay_app)
 	
 	# Set initial values
 	_on_date_updated(TimeManager.get_date_string())
@@ -36,3 +38,11 @@ func _on_messages_pressed() -> void:
 
 func _on_close_message_app() -> void:
 	remove_child(message_app)
+
+
+func _on_v_bay_pressed() -> void:
+	add_child(vbay_app)
+	
+
+func _on_close_v_bay_app() -> void:
+	remove_child(vbay_app)

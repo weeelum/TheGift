@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cl4fjmdqlejes"
+path="res://.godot/imported/steven 2.dialogue-4c27d42c295827c8d2867df9ceeec7a6.tres"
+
+[deps]
+
+source_file="res://Messages/steven 2.dialogue"
+dest_files=["res://.godot/imported/steven 2.dialogue-4c27d42c295827c8d2867df9ceeec7a6.tres"]
+
+[params]
+
+defaults=true

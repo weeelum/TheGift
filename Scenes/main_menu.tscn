@@ -67,7 +67,7 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Browser" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
+[node name="vBay" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.219792
@@ -77,7 +77,7 @@ anchor_bottom = 0.865741
 offset_right = 110.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 22
-text = "Browser"
+text = "vBay"
 icon = ExtResource("3_opfnp")
 flat = true
 icon_alignment = 1
@@ -212,4 +212,5 @@ label_settings = SubResource("LabelSettings_opfnp")
 horizontal_alignment = 1
 
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/Quiz" to="." method="_on_qg_button_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/vBay" to="." method="_on_v_bay_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/Messages" to="." method="_on_messages_pressed"]

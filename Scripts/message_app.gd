@@ -41,7 +41,7 @@ $PanelContainer/HBoxContainer/Threads/VBoxContainer/HBoxContainer/SendBtn
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Connect Close button signal to close the app
-	$PanelContainer/HBoxContainer/VBoxContainer/TopLeftMenu/Close.\
+	$PanelContainer/HBoxContainer/VBoxContainer/TopLeftMenu/CloseBtn.\
 	pressed.connect(_on_close_pressed)
 	
 	# Connect Send button for sending replies
