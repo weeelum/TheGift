@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://4cyajmpvya0t"]
 
-[ext_resource type="Theme" uid="uid://5lacq73qg3pw" path="res://Resources/theme.tres" id="1_yaf6g"]
-[ext_resource type="Script" uid="uid://sosl863fhq74" path="res://Scripts/dialogue_box.gd" id="2_l304u"]
+[ext_resource type="Theme" uid="uid://5lacq73qg3pw" path="res://Resources/theme 3.tres" id="1_yaf6g"]
+[ext_resource type="Script" uid="uid://bq8h2npgrxh0h" path="res://Scripts/dialogue_box.gd" id="2_l304u"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="2_qkucv"]
-[ext_resource type="Texture2D" uid="uid://b6stlfhtnvf46" path="res://Assets/Portraits/nathan.svg" id="3_sx16g"]
-[ext_resource type="Texture2D" uid="uid://cglpxh712akfg" path="res://Assets/Portraits/coco.svg" id="5_dhpuu"]
+[ext_resource type="Texture2D" uid="uid://dsj4crxjwv4ty" path="res://Assets/Portraits/nathan.svg" id="3_sx16g"]
+[ext_resource type="Texture2D" uid="uid://c5ryiwlbkl6gs" path="res://Assets/Portraits/coco.svg" id="5_dhpuu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cs1qt"]
 font_color = Color(1, 0.512959, 0, 1)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsj4crxjwv4ty"
-path="res://.godot/imported/nathan 3.svg-42fbffba13e1ad40205117cbf1f7ed63.ctex"
+uid="uid://c5ryiwlbkl6gs"
+path="res://.godot/imported/coco.svg-a7696a0c7b954bfe1c8772e3d835a6bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Portraits/nathan 3.svg"
-dest_files=["res://.godot/imported/nathan 3.svg-42fbffba13e1ad40205117cbf1f7ed63.ctex"]
+source_file="res://Assets/Portraits/coco.svg"
+dest_files=["res://.godot/imported/coco.svg-a7696a0c7b954bfe1c8772e3d835a6bc.ctex"]
 
 [params]
 
