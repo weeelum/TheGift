@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://1v2sx7filk0m"]
 
-[ext_resource type="Script" uid="uid://v11v5uorfuyn" path="res://Scripts/vbay_app.gd" id="1_mok2p"]
+[ext_resource type="Script" path="res://Scripts/vbay_app.gd" id="1_mok2p"]
 [ext_resource type="Texture2D" uid="uid://dpccdx5hab0k6" path="res://icon.svg" id="2_fgta2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4kvt"]
