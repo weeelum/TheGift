@@ -9,14 +9,14 @@ var vbay_app : Control = preload("res://Scenes/vbay_app.tscn").instantiate()
 
 
 func _ready() -> void:
-	TimeManager.time_updated.connect(_on_time_updated)
-	TimeManager.date_updated.connect(_on_date_updated)
+	TM.time_updated.connect(_on_time_updated)
+	TM.date_updated.connect(_on_date_updated)
 	message_app.close_requested.connect(_on_close_message_app)
 	vbay_app.close_requested.connect(_on_close_v_bay_app)
 	
 	# Set initial values
-	_on_date_updated(TimeManager.get_date_string())
-	_on_time_updated(TimeManager.get_time_string())
+	_on_date_updated(TM.get_date_string())
+	_on_time_updated(TM.get_time_string())
 	
 	
 func _on_date_updated(new_date: String) -> void:

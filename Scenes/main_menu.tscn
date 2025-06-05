@@ -167,6 +167,14 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
 text = "New Game"
 flat = true
 
+[node name="SaveBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+text = "Save"
+flat = true
+
 [node name="LoadGameBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0

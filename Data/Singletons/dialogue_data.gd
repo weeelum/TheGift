@@ -57,6 +57,7 @@ var conversation_data := {
 					{
 						"text": "Sure. I'll start right now.",
 						"next_id": "mom_payment",
+						"type": DialogueType.MISSION,
 					}
 				]
 			},
