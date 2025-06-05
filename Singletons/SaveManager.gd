@@ -6,11 +6,13 @@ var save_path := "user://save_game"
 # Data to save
 var conversation_state := {}
 var started_conversations := {}
+var displayed_thread := {}
 
 func save_game():
 	var data := {
 		"conversation_state": conversation_state,
 		"started_conversations": started_conversations,
+		"displayed_thread": displayed_thread,
 	}
 	
 	var file := FileAccess.open(save_path, FileAccess.WRITE)
@@ -30,6 +32,7 @@ func load_game():
 	
 	conversation_state = data.get("conversation_state", {})
 	started_conversations = data.get("started_conversations", {})
+	displayed_thread = data.get("displayed_thread", {})
 	print("Game loaded.")
 	
 

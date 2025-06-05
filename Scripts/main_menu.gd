@@ -17,6 +17,15 @@ func _ready() -> void:
 	# Set initial values
 	_on_date_updated(TM.get_date_string())
 	_on_time_updated(TM.get_time_string())
+
+
+func _update_game_state_from_save() -> void:
+	if message_app:
+		message_app.load_state()
+		message_app.thread_display.clear()
+		message_app.thread_display.append_text(
+			message_app.displayed_thread.get(message_app.current_contact, "")
+		)
 	
 	
 func _on_date_updated(new_date: String) -> void:
@@ -26,6 +35,19 @@ func _on_date_updated(new_date: String) -> void:
 func _on_time_updated(new_time: String) -> void:
 	time_label.text = new_time
 
+
+func _on_new_game_btn_pressed() -> void:
+	SM.new_game()
+	_update_game_state_from_save()
+	
+
+func _on_save_btn_pressed() -> void:
+	SM.save_game()
+	
+	
+func _on_load_game_btn_pressed() -> void:
+	SM.load_game()
+	_update_game_state_from_save()
 
 func _on_qg_button_pressed() -> void:
 	add_child(quiz_game)

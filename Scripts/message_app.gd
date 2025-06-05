@@ -4,9 +4,10 @@ signal close_requested
 
 var current_contact := ""
 var current_node_id := "start"
-var started_conversations := {}
 var active_conversations := {}
 var conversation_state := {}
+var started_conversations := {}
+var displayed_thread := {}
 var last_contact_button : Button = null
 
 # Cache UI
@@ -19,13 +20,13 @@ var last_contact_button : Button = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Load conversation states
-	#load_state()
+	load_state()
 	
 	# Connect Close button signal to close the app
 	close_btn.pressed.connect(_on_close_pressed)
 	
 	# Connect Send button for sending replies
-	send_btn.pressed.connect(_on_SendBtn_pressed)
+	send_btn.pressed.connect(_on_send_btn_pressed)
 	
 	# Connect all contact buttons dynamically
 	for contact_button in %VBoxContainer.get_children():
@@ -57,30 +58,31 @@ func _on_contact_pressed(contact_button : Button) -> void:
 	reply_options.clear()
 	show_current_node()
 	
-	## Restore previous state if it exists
-	#if conversation_state.has(contact_name):
-		#current_node_id = conversation_state[contact_name]
-	#else:
-		#current_node_id = "start"
-		#conversation_state[contact_name] = current_node_id
-
-
-## Show current conversation thread
-func show_current_node() -> void:
-	var node = get_current_node()
-	if node.is_empty():
-		thread_display.append_text("[i]End of conversation.[/i]\n")
-		return
-	
-	thread_display.append_text("[b]%s:[/b] %s\n" % [node.speaker, node.text])
-	populate_replies(node.replies)
-	
 
 ## Get current conversation thread
 func get_current_node() -> Dictionary:
 	var thread = DD.conversation_data["Threads"].get(current_contact, {})
 	return thread.get(current_node_id, {})
 	
+
+## Show current conversation thread
+func show_current_node() -> void:
+	var node = get_current_node()
+	var text := "[b]%s:[/b] %s\n" % [node.speaker, node.text]
+	var end_text := "[i]End of conversation.[/i]\n"
+	
+	if node.is_empty():
+		thread_display.append_text(end_text)
+		displayed_thread[current_contact] = \
+		displayed_thread.get(current_contact, "") + end_text
+		return
+	
+	thread_display.append_text(text)
+	displayed_thread[current_contact] = \
+		displayed_thread.get(current_contact, "") + text
+	
+	populate_replies(node.replies)
+
 
 ## Show reply options in ItemList
 func populate_replies(replies : Array) -> void:
@@ -90,16 +92,19 @@ func populate_replies(replies : Array) -> void:
 		
 
 # Handle reply submission
-func _on_SendBtn_pressed() -> void:
+func _on_send_btn_pressed() -> void:
 	var selected = reply_options.get_selected_items()
-	if selected.is_empty():
-		return
-	
 	var index = selected[0]
 	var node = get_current_node()
 	var reply = node.replies[index]
+	var reply_text := "[color=blue]You:[/color] %s\n" % reply.text
 	
-	thread_display.append_text("[color=blue]You:[/color] %s\n" % reply.text)
+	if selected.is_empty():
+		return
+	
+	thread_display.append_text(reply_text)
+	displayed_thread[current_contact] = \
+		displayed_thread.get(current_contact, "") + reply_text
 	
 	match reply.type:
 		DD.DialogueType.MISSION:
@@ -113,29 +118,33 @@ func _on_SendBtn_pressed() -> void:
 func continue_conversation(next_id: String) -> void:
 	current_node_id = next_id
 	conversation_state[current_contact] = current_node_id
+	save_state()
 	show_current_node()
-	#save_state()
-	
-
-func save_state():
-	var file := FileAccess.open("user://convo_state.save", FileAccess.WRITE)
-	file.store_var(conversation_state)
 
 
 func load_state():
-	if FileAccess.file_exists("user://convo_state.save"):
-		var file := FileAccess.open("user://convo_state.save", FileAccess.READ)
-		conversation_state = file.get_var()
-	else:
-		conversation_state = {}
+	conversation_state = SM.conversation_state
+	started_conversations = SM.started_conversations
+	displayed_thread = SM.displayed_thread
+
+
+func save_state():
+	SM.conversation_state = conversation_state
+	SM.started_conversations = started_conversations
+	SM.displayed_thread = displayed_thread
 	
 	
 func start_mission(next_id : String) -> void:
 	## Replace this with actual mission-setup logic
-	thread_display.append_text("[i]Mission started![/i]\n")
+	var mission_text := "[i]Mission started![/i]\n"
+	
 	continue_conversation(next_id)
+	
+	thread_display.append_text(mission_text)
+	displayed_thread[current_contact] = \
+		displayed_thread.get(current_contact, "") + mission_text
 	
 
 func _on_close_pressed():
-	#save_state()
+	save_state()
 	emit_signal("close_requested")
