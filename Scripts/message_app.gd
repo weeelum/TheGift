@@ -1,3 +1,4 @@
+#message_app.gd
 extends Control
 
 signal close_requested
@@ -19,7 +20,7 @@ var last_contact_button : Button = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Load conversation states
+	## Load conversation states
 	load_state()
 	
 	# Connect Close button signal to close the app

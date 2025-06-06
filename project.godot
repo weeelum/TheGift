@@ -18,9 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 TM="*res://Singletons/TimeManager.gd"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-DD="*res://Data/Singletons/dialogue_data.gd"
+DialogueManager="res://addons/dialogue_manager/dialogue_manager.gd"
+DD="*res://Data/Singletons/DialogueData.gd"
 SM="*res://Singletons/SaveManager.gd"
+DM="*res://Data/Singletons/DialogueManager.gd"
 
 [display]
 
