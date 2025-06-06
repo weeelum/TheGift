@@ -1,3 +1,4 @@
+#main_menu.gd
 extends Control
 
 @onready var date_label : Label = %Date
@@ -9,14 +10,23 @@ var vbay_app : Control = preload("res://Scenes/vbay_app.tscn").instantiate()
 
 
 func _ready() -> void:
-	TimeManager.time_updated.connect(_on_time_updated)
-	TimeManager.date_updated.connect(_on_date_updated)
+	TM.time_updated.connect(_on_time_updated)
+	TM.date_updated.connect(_on_date_updated)
 	message_app.close_requested.connect(_on_close_message_app)
 	vbay_app.close_requested.connect(_on_close_v_bay_app)
 	
 	# Set initial values
-	_on_date_updated(TimeManager.get_date_string())
-	_on_time_updated(TimeManager.get_time_string())
+	_on_date_updated(TM.get_date_string())
+	_on_time_updated(TM.get_time_string())
+
+
+#func _update_game_state_from_save() -> void:
+	#if message_app:
+		#message_app.load_state()
+		#message_app.thread_display.clear()
+		#message_app.thread_display.append_text(
+			#message_app.displayed_thread.get(message_app.current_contact, "")
+		#)
 	
 	
 func _on_date_updated(new_date: String) -> void:
@@ -26,6 +36,19 @@ func _on_date_updated(new_date: String) -> void:
 func _on_time_updated(new_time: String) -> void:
 	time_label.text = new_time
 
+
+#func _on_new_game_btn_pressed() -> void:
+	#SM.new_game()
+	#_update_game_state_from_save()
+	#
+#
+#func _on_save_btn_pressed() -> void:
+	#SM.save_game()
+	#
+	#
+#func _on_load_game_btn_pressed() -> void:
+	#SM.load_game()
+	#_update_game_state_from_save()
 
 func _on_qg_button_pressed() -> void:
 	add_child(quiz_game)
