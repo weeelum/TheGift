@@ -7,3 +7,5 @@
 script = ExtResource("1_jjgbg")
 
 [node name="MainMenu" parent="." instance=ExtResource("3_8gbba")]
+offset_right = 0.0
+offset_bottom = 0.0

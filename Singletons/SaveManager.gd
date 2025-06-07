@@ -1,4 +1,4 @@
-# SaveManager.gd
+## SaveManager.gd
 extends Node
 
 var save_path := "user://save_game"

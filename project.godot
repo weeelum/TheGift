@@ -22,6 +22,7 @@ DialogueManager="res://addons/dialogue_manager/dialogue_manager.gd"
 DD="*res://Data/Singletons/DialogueData.gd"
 SM="*res://Singletons/SaveManager.gd"
 DM="*res://Data/Singletons/DialogueManager.gd"
+SettingsManager="*res://Data/Singletons/SettingsManager.gd"
 
 [display]
 

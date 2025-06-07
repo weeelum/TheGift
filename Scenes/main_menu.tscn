@@ -225,3 +225,4 @@ horizontal_alignment = 1
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/SaveBtn" to="." method="_on_save_btn_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/SettingsBtn" to="." method="_on_settings_btn_pressed"]
