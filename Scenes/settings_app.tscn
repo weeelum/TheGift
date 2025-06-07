@@ -96,11 +96,13 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 14.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/ResolutionSelection"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer/ResolutionSelection/VBoxContainer"]
+unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
@@ -114,7 +116,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.04
 theme = SubResource("Theme_mok2p")
 theme_override_font_sizes/font_size = 30
-text = "1280 x 720"
+text = "HD"
 
 [node name="FullHD" type="Button" parent="PanelContainer/VBoxContainer/ResolutionSelection/VBoxContainer"]
 unique_name_in_owner = true
@@ -124,7 +126,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.04
 theme = SubResource("Theme_mok2p")
 theme_override_font_sizes/font_size = 30
-text = "1920 x 1080"
+text = "Full HD"
 
 [node name="QHD" type="Button" parent="PanelContainer/VBoxContainer/ResolutionSelection/VBoxContainer"]
 unique_name_in_owner = true
@@ -134,7 +136,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.04
 theme = SubResource("Theme_mok2p")
 theme_override_font_sizes/font_size = 30
-text = "2560 x 1440"
+text = "QHD"
 
 [node name="UHD" type="Button" parent="PanelContainer/VBoxContainer/ResolutionSelection/VBoxContainer"]
 unique_name_in_owner = true
@@ -144,4 +146,4 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.04
 theme = SubResource("Theme_mok2p")
 theme_override_font_sizes/font_size = 30
-text = "3840 x 2160"
+text = "UHD"

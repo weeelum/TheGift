@@ -59,7 +59,6 @@ func _on_qg_button_pressed() -> void:
 func _on_settings_btn_pressed() -> void:
 	add_child(settings_app)
 	settings_app.set_position(Vector2(510, 190))
-	print("settings app opened")
 	
 
 func _on_close_settings_app() -> void:
