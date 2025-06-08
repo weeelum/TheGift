@@ -41,6 +41,7 @@ layout_mode = 2
 metadata/_edit_lock_ = true
 
 [node name="Apps" type="Control" parent="AspectRatioContainer/PanelContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(1920, 0)
 layout_mode = 2
 anchors_preset = 0
@@ -103,6 +104,7 @@ expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Messages" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.308334
@@ -120,6 +122,7 @@ expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Journal" type="Button" parent="AspectRatioContainer/PanelContainer/Apps"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.123959
@@ -222,7 +225,4 @@ horizontal_alignment = 1
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/Quiz" to="." method="_on_qg_button_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/vBay" to="." method="_on_v_bay_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/Apps/Messages" to="." method="_on_messages_pressed"]
-[connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
-[connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/SaveBtn" to="." method="_on_save_btn_pressed"]
-[connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/LoadGameBtn" to="." method="_on_load_game_btn_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/SettingsBtn" to="." method="_on_settings_btn_pressed"]

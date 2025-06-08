@@ -56,11 +56,16 @@ text = "Close"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+size_flags_stretch_ratio = 6.55
 text = "vBay"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SearchBar" type="TextEdit" parent="PanelContainer/VBoxContainer/TopLeftMenu"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SearchBar" type="TextEdit" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.0
@@ -70,12 +75,12 @@ placeholder_text = "Type to search"
 caret_blink = true
 caret_draw_when_editable_disabled = true
 
-[node name="SearchBtn" type="Button" parent="PanelContainer/VBoxContainer/TopLeftMenu"]
+[node name="SearchBtn" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Search"
 
-[node name="ListBtn" type="Button" parent="PanelContainer/VBoxContainer/TopLeftMenu"]
+[node name="ListBtn" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "List"
