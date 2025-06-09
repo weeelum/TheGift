@@ -30,8 +30,10 @@ func _ready() -> void:
 	send_btn.pressed.connect(_on_send_btn_pressed)
 	
 	# Connect all contact buttons dynamically
-	for contact_button in %VBoxContainer.get_children():
-		contact_button.pressed.connect(_on_contact_pressed.bind(contact_button))
+	for hbox in %VBoxContainer.get_children():
+		for contact_button in hbox.get_children():
+			contact_button.pressed.connect(_on_contact_pressed.bind(contact_button))
+		
 
 # Load a conversation when contact is clicked
 func _on_contact_pressed(contact_button : Button) -> void:

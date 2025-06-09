@@ -6,7 +6,7 @@ extends Control
 
 var quiz_game : Node2D = preload("res://Scenes/qg.tscn").instantiate()
 var message_app : Control = preload("res://Scenes/message_app.tscn").instantiate()
-var vbay_app : Control = preload("res://Scenes/vbay_app.tscn").instantiate()
+var crowlift_app : Control = preload("res://Scenes/crowlift_app.tscn").instantiate()
 var settings_app : Control = preload("res://Scenes/settings_app.tscn").instantiate()
 
 var apps_open : Array = []
@@ -16,7 +16,7 @@ func _ready() -> void:
 	TM.date_updated.connect(_on_date_updated)
 
 	message_app.close_requested.connect(_on_close_message_app)
-	vbay_app.close_requested.connect(_on_close_v_bay_app)
+	crowlift_app.close_requested.connect(_on_close_crowlift_app)
 	settings_app.close_requested.connect(_on_close_settings_app)
 	
 	# Set initial values
@@ -83,8 +83,11 @@ func _on_close_message_app() -> void:
 
 
 func _on_v_bay_pressed() -> void:
-	add_child(vbay_app)
-	vbay_app.set_position(Vector2(510, 190))
+	if crowlift_app.is_inside_tree():
+		return
+	
+	add_child(crowlift_app)
+	crowlift_app.set_position(Vector2(510, 190))
 
-func _on_close_v_bay_app() -> void:
-	remove_child(vbay_app)
+func _on_close_crowlift_app() -> void:
+	remove_child(crowlift_app)
