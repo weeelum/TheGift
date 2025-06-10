@@ -1,0 +1,26 @@
+[
+	{
+		"name": "ClubHitz",
+		"size": "3.2MB",
+		"length": "2:58",
+		"bpm": 130,
+		"tags": ["club", "pop"],
+		"risk": "Safe"
+	},
+	{
+		"name": "Dance_FINAL.exe",
+		"size": "0.73KB",
+		"length": null,
+		"bpm": null,
+		"tags": ["dance"],
+		"risk": "Virus"
+	},
+	{
+		"name": "MidnightJazz.mp3",
+		"size": "4.5MB",
+		"length": "4:15",
+		"bpm": 85,
+		"tags": ["jazz", "chill"],
+		"risk": "Safe"
+	},
+]
