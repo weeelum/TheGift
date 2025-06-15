@@ -5,14 +5,18 @@
 		"length": "2:58",
 		"bpm": 130,
 		"tags": ["club", "pop"],
+		"rating": 4,
+		"time": 10,
 		"risk": "Safe"
 	},
 	{
 		"name": "Dance_FINAL.exe",
 		"size": "0.73KB",
-		"length": null,
+		"length": "2:58",
 		"bpm": null,
 		"tags": ["dance"],
+		"rating": 1,
+		"time": 1,
 		"risk": "Virus"
 	},
 	{
@@ -21,6 +25,8 @@
 		"length": "4:15",
 		"bpm": 85,
 		"tags": ["jazz", "chill"],
+		"rating": 3,
+		"time": 30,
 		"risk": "Safe"
 	},
 ]
