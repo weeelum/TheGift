@@ -24,6 +24,7 @@ SM="*res://Singletons/SaveManager.gd"
 DM="*res://Data/Singletons/DialogueManager.gd"
 SettingsManager="*res://Data/Singletons/SettingsManager.gd"
 TD="*res://Data/Singletons/TrackDatabase.gd"
+PopupManager="*res://Singletons/PopupManager.gd"
 
 [display]
 

@@ -26,7 +26,7 @@ func advance(delta : float) -> bool:
 	
 	if time_remaining <= 0:
 		if track_data.get("risk", "") == "Virus":
-			_on_popup_triggered()
+			PopupManager.trigger_virus_popup(track_data["name"])
 		return true # Done downloading
 	return false
 	

@@ -5,11 +5,11 @@ signal close_requested
 @onready var track_list = %TrackDataList
 @onready var search_bar = %SearchBar
 @onready var progress_area = %ProgressArea
-@onready var popup_manager = %PopupLayer
 
 var tracks : Array = []
 var download_queue : Array = []
 var selected_track : Dictionary = {}
+var popup_window : CanvasLayer
 
 func _ready() -> void:
 	%CloseBtn.pressed.connect(_on_close_pressed)
@@ -45,14 +45,10 @@ func _on_track_selected(track_data : Dictionary):
 
 func _on_download_btn_pressed() -> void:
 	var row = preload("res://Scenes/progress_row.tscn").instantiate()
-	var popup_window = preload("res://Scenes/popup_window.tscn").instantiate()
 	
-	popup_window.connect("popup_triggered", Callable(self, ""))
-	
-	row.setup(selected_track, popup_manager)
+	row.setup(selected_track, popup_window)
 	progress_area.add_child(row)
 	download_queue.append(row)
-	
 	
 
 func _process(delta: float):
