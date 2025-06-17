@@ -35,21 +35,24 @@ func populate_track_list(data : Array):
 	for entry in data:
 		var item = preload("res://Scenes/track_item.tscn").instantiate()
 		item.set_track_data(entry)
-		item.connect("track_selected", Callable(self, "_on_track_selected"))
+		item.connect("track_toggled", Callable(self, "_on_track_toggled"))
 		track_list.add_child(item)
 		
 
-func _on_track_selected(track_data : Dictionary):
+func _on_track_toggled(track_data : Dictionary):	
 	selected_track = track_data
 	
 
 func _on_download_btn_pressed() -> void:
 	var row = preload("res://Scenes/progress_row.tscn").instantiate()
 	
-	row.setup(selected_track, popup_window)
-	progress_area.add_child(row)
-	download_queue.append(row)
-	
+	if selected_track:		
+		row.setup(selected_track, popup_window)
+		progress_area.add_child(row)
+		download_queue.append(row)
+	elif !selected_track:
+		return
+
 
 func _process(delta: float):
 	for row in download_queue:

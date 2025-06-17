@@ -223,7 +223,7 @@ size_flags_horizontal = 3
 label_settings = SubResource("LabelSettings_opfnp")
 horizontal_alignment = 1
 
-[node name="PopupLayer" type="CanvasLayer" parent="AspectRatioContainer"]
+[node name="PopupWindow" type="CanvasLayer" parent="AspectRatioContainer"]
 unique_name_in_owner = true
 script = ExtResource("7_cp0ys")
 

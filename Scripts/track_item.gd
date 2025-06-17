@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-signal track_selected(data : Dictionary)
+signal track_toggled(data : Dictionary)
 
 var song_data : Dictionary
 
@@ -16,5 +16,12 @@ func set_track_data(data : Dictionary):
 
 
 func _on_select_btn_pressed() -> void:
-	emit_signal("track_selected", song_data)
-	print("'%s' selected" % song_data["name"])
+	pass
+
+
+func _on_select_btn_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		emit_signal("track_toggled", song_data)
+		print("'%s' selected" % song_data["name"])
+	else:
+		return

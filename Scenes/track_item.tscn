@@ -59,4 +59,4 @@ size_flags_horizontal = 3
 toggle_mode = true
 text = "Select"
 
-[connection signal="pressed" from="SelectBtn" to="." method="_on_select_btn_pressed"]
+[connection signal="toggled" from="SelectBtn" to="." method="_on_select_btn_toggled"]
