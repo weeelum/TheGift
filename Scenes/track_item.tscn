@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn0m0cuy4mguc"]
+[gd_scene load_steps=2 format=3 uid="uid://bcx6t3jjsajpr"]
 
-[ext_resource type="Script" uid="uid://bj51bpgqmbsas" path="res://Scripts/track_item.gd" id="1_mqjj0"]
+[ext_resource type="Script" path="res://Scripts/track_item.gd" id="1_mqjj0"]
 
 [node name="TrackItem" type="HBoxContainer"]
 script = ExtResource("1_mqjj0")

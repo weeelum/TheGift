@@ -6,7 +6,7 @@
 		"bpm": 80,
 		"tags": ["hip-hop", "club"],
 		"rating": 4,
-		"time": 11,
+		"time": 3,
 		"risk": "Safe"
 	},
 	{
@@ -16,7 +16,7 @@
 		"bpm": 186,
 		"tags": ["punk", "rock", "alternative"],
 		"rating": 4,
-		"time": 27,
+		"time": 11,
 		"risk": "Risky"
 	},
 	{
@@ -26,7 +26,7 @@
 		"bpm": 160,
 		"tags": ["pop", "funk", "hip-hop"],
 		"rating": 2,
-		"time": 27,
+		"time": 10,
 		"risk": "Risky"
 	},
 	{
@@ -86,7 +86,7 @@
 		"bpm": 76,
 		"tags": ["pop", "r&b", "ballad"],
 		"rating": 1,
-		"time": 20,
+		"time": 15,
 		"risk": "Risky"
 	},
 	{
@@ -96,7 +96,7 @@
 		"bpm": 127,
 		"tags": ["metal", "rock", "alt"],
 		"rating": 3,
-		"time": 28,
+		"time": 23,
 		"risk": "Virus"
 	},
 	{
@@ -116,7 +116,7 @@
 		"bpm": 113,
 		"tags": ["pop", "r&b", "dance"],
 		"rating": 1,
-		"time": 16,
+		"time": 6,
 		"risk": "Virus"
 	},
 	{
