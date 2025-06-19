@@ -41,6 +41,7 @@
 	},
 	{
 		"name": "Dirrty_backup",
+		"name": "ClubHitz",
 		"size": "3.2MB",
 		"length": "4:01",
 		"bpm": 100,
@@ -170,73 +171,23 @@
 		"risk": "Safe"
 	},
 	{
-		"name": "SexyBack_leaked.bat",
-		"size": "0.65MB",
-		"length": "4:02",
-		"bpm": 117,
-		"tags": ["pop", "r&b", "electronic"],
-		"rating": 4,
-		"time": 24,
+		"name": "Dance_FINAL.exe",
+		"size": "0.73KB",
+		"length": "2:58",
+		"bpm": null,
+		"tags": ["dance"],
+		"rating": 1,
+		"time": 1,
 		"risk": "Virus"
 	},
 	{
-		"name": "StacysMom_FreeDL.bat",
-		"size": "0.81MB",
-		"length": "3:17",
-		"bpm": 120,
-		"tags": ["pop", "rock", "comedy"],
-		"rating": 4,
-		"time": 20,
-		"risk": "Virus"
-	},
-	{
-		"name": "Clocks_HQ.txt",
-		"size": "3.8MB",
-		"length": "5:07",
-		"bpm": 131,
-		"tags": ["rock", "alternative", "ambient"],
-		"rating": 1,
-		"time": 20,
+		"name": "MidnightJazz.mp3",
+		"size": "4.5MB",
+		"length": "4:15",
+		"bpm": 85,
+		"tags": ["jazz", "chill"],
+		"rating": 3,
+		"time": 30,
 		"risk": "Safe"
-	},
-	{
-		"name": "GetBusy_(1).wav",
-		"size": "3.6MB",
-		"length": "3:33",
-		"bpm": 100,
-		"tags": ["dancehall", "pop", "club"],
-		"rating": 2,
-		"time": 12,
-		"risk": "Safe"
-	},
-	{
-		"name": "HarderBetterFasterStronger_Cut.mp3",
-		"size": "4.2MB",
-		"length": "3:45",
-		"bpm": 123,
-		"tags": ["electronic", "dance", "experimental"],
-		"rating": 4,
-		"time": 25,
-		"risk": "Risky"
-	},
-	{
-		"name": "HotNCold_(1).mp3",
-		"size": "4.7MB",
-		"length": "3:40",
-		"bpm": 132,
-		"tags": ["pop", "dance", "breakup"],
-		"rating": 4,
-		"time": 14,
-		"risk": "Risky"
-	},
-	{
-		"name": "FeelGoodInc_FreeDL.mp3",
-		"size": "5.2MB",
-		"length": "3:41",
-		"bpm": 139,
-		"tags": ["alternative", "hip-hop", "funk"],
-		"rating": 1,
-		"time": 3,
-		"risk": "Risky"
 	},
 ]
