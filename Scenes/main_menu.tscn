@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cn3w3xxyluv05" path="res://Assets/DesktopIcons/Globe_1.png" id="3_opfnp"]
 [ext_resource type="Texture2D" uid="uid://dtw8rsvhojax2" path="res://Assets/DesktopIcons/notebook_v1.png" id="4_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://dr7fnf5kqky3o" path="res://Assets/DesktopIcons/Messages.png" id="5_cp0ys"]
-[ext_resource type="Script" path="res://Singletons/PopupManager.gd" id="7_cp0ys"]
+[ext_resource type="Script" uid="uid://sbs0lyf6em6t" path="res://Singletons/PopupManager.gd" id="7_cp0ys"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
 bg_color = Color(0.308769, 0.308769, 0.308769, 1)

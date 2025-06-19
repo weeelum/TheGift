@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dn4bx1nrwdkb5"]
 
-[ext_resource type="Script" path="res://Scripts/progress_row.gd" id="1_omudd"]
+[ext_resource type="Script" uid="uid://c7jxru526m3wm" path="res://Scripts/progress_row.gd" id="1_omudd"]
 
 [node name="ProgressRow" type="HBoxContainer"]
 size_flags_horizontal = 3
