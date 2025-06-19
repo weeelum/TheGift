@@ -73,10 +73,10 @@ scroll_fit_content_height = true
 caret_blink = true
 caret_draw_when_editable_disabled = true
 
-[node name="ClearSearchBtn" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="ClearBtn" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Search"
+text = "Clear"
 
 [node name="SearchBtn" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -90,7 +90,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-size_flags_stretch_ratio = 2.5
+size_flags_stretch_ratio = 5.0
 text = "Name"
 vertical_alignment = 1
 
@@ -98,7 +98,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 5.0
 text = "Size"
 vertical_alignment = 1
 
@@ -106,7 +106,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 5.0
 text = "Length"
 vertical_alignment = 1
 
@@ -114,7 +114,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 5.0
 text = "BPM"
 vertical_alignment = 1
 
@@ -122,7 +122,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 5.0
 text = "Tags"
 vertical_alignment = 1
 
@@ -130,7 +130,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 5.0
 text = "Rating"
 vertical_alignment = 1
 
