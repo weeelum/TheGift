@@ -74,20 +74,24 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Alex" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/Contacts/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = SubResource("Theme_ellov")
 theme_override_font_sizes/font_size = 20
 text = "Alex"
 
 [node name="Mom" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/Contacts/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = SubResource("Theme_ellov")
 theme_override_font_sizes/font_size = 20
 text = "Mom"
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/HBoxContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
 
 [node name="Threads" type="ScrollContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
