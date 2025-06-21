@@ -1,0 +1,23 @@
+[
+  {
+	"id": "quest_01",
+	"title": "Find the Lost Key",
+	"description": "The mayor lost his key. Search the town and return it.",
+	"objectives": [
+	  {
+		"type": "fetch",
+		"target": "key",
+		"location": "mayor_house",
+		"completed": false
+	  }
+	],
+	"rewards": {
+	  "xp": 100,
+	  "gold": 50,
+	  "items": ["mayor_letter"]
+	},
+	"status": "not_started",
+	"prerequisites": [],
+	"next_quest": "quest_002"
+  }
+]

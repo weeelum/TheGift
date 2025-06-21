@@ -8,6 +8,7 @@ var quiz_game : Node2D = preload("res://Scenes/qg.tscn").instantiate()
 var message_app : Control = preload("res://Scenes/message_app.tscn").instantiate()
 var crowlift_app : Control = preload("res://Scenes/crowlift_app.tscn").instantiate()
 var settings_app : Control = preload("res://Scenes/settings_app.tscn").instantiate()
+var tasks_app : Control = preload("res://Scenes/tasks.tscn").instantiate()
 
 var apps_open : Array = []
 
@@ -17,7 +18,9 @@ func _ready() -> void:
 
 	message_app.close_requested.connect(_on_close_message_app)
 	crowlift_app.close_requested.connect(_on_close_crowlift_app)
+	
 	settings_app.close_requested.connect(_on_close_settings_app)
+	tasks_app.close_requested.connect(_on_close_tasks_app)
 	
 	# Set initial values
 	_on_date_updated(TM.get_date_string())
@@ -82,12 +85,24 @@ func _on_close_message_app() -> void:
 	remove_child(message_app)
 
 
-func _on_v_bay_pressed() -> void:
+func _on_crowlift_pressed() -> void:
 	if crowlift_app.is_inside_tree():
 		return
 	
 	add_child(crowlift_app)
 	crowlift_app.set_position(Vector2(510, 190))
 
+
 func _on_close_crowlift_app() -> void:
 	remove_child(crowlift_app)
+
+
+func _on_tasks_pressed() -> void:
+	if tasks_app.is_inside_tree():
+		return
+	
+	add_child(tasks_app)
+	tasks_app.set_position(Vector2(510, 190))
+	
+func _on_close_tasks_app() -> void:
+	remove_child(tasks_app)

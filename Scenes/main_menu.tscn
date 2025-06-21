@@ -185,18 +185,6 @@ size_flags_horizontal = 0
 text = "Load Game"
 flat = true
 
-[node name="SettingsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Settings"
-flat = true
-
-[node name="HelpBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Help"
-flat = true
-
 [node name="CreditsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -209,10 +197,29 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 16.0
 
+[node name="Tasks" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Tasks"
+flat = true
+
+[node name="SettingsBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Settings"
+flat = true
+
+[node name="HelpBtn" type="Button" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Help"
+flat = true
+
 [node name="Date" type="Label" parent="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+text = "01/01/2000"
 label_settings = SubResource("LabelSettings_opfnp")
 horizontal_alignment = 1
 
@@ -220,6 +227,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+text = "06:00"
 label_settings = SubResource("LabelSettings_opfnp")
 horizontal_alignment = 1
 
@@ -228,6 +236,7 @@ unique_name_in_owner = true
 script = ExtResource("7_cp0ys")
 
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/AppBtns/Quiz" to="." method="_on_qg_button_pressed"]
-[connection signal="pressed" from="AspectRatioContainer/PanelContainer/AppBtns/CrowLift" to="." method="_on_v_bay_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/AppBtns/CrowLift" to="." method="_on_crowlift_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/AppBtns/Messages" to="." method="_on_messages_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/Tasks" to="." method="_on_tasks_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/PanelContainer/MenuBar/HBoxContainer/SettingsBtn" to="." method="_on_settings_btn_pressed"]
