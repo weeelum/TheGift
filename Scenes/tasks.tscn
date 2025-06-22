@@ -77,47 +77,47 @@ vertical_alignment = 1
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 
-[node name="Tasks" type="ScrollContainer" parent="PanelContainer/HBoxContainer/TaskList"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/TaskList"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 14.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/TaskList/Tasks"]
+[node name="Tasks" type="VBoxContainer" parent="PanelContainer/HBoxContainer/TaskList/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Task0" type="Button" parent="PanelContainer/HBoxContainer/TaskList/Tasks/VBoxContainer"]
+[node name="Task0" type="Button" parent="PanelContainer/HBoxContainer/TaskList/ScrollContainer/Tasks"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_aftiw")
 theme_override_font_sizes/font_size = 20
 
-[node name="Task1" type="Button" parent="PanelContainer/HBoxContainer/TaskList/Tasks/VBoxContainer"]
+[node name="Task1" type="Button" parent="PanelContainer/HBoxContainer/TaskList/ScrollContainer/Tasks"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_aftiw")
 theme_override_font_sizes/font_size = 20
 
-[node name="Task2" type="Button" parent="PanelContainer/HBoxContainer/TaskList/Tasks/VBoxContainer"]
+[node name="Task2" type="Button" parent="PanelContainer/HBoxContainer/TaskList/ScrollContainer/Tasks"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_aftiw")
 theme_override_font_sizes/font_size = 20
 
-[node name="Task3" type="Button" parent="PanelContainer/HBoxContainer/TaskList/Tasks/VBoxContainer"]
+[node name="Task3" type="Button" parent="PanelContainer/HBoxContainer/TaskList/ScrollContainer/Tasks"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_aftiw")
 theme_override_font_sizes/font_size = 20
 
-[node name="Task4" type="Button" parent="PanelContainer/HBoxContainer/TaskList/Tasks/VBoxContainer"]
+[node name="Task4" type="Button" parent="PanelContainer/HBoxContainer/TaskList/ScrollContainer/Tasks"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -128,136 +128,160 @@ theme_override_font_sizes/font_size = 20
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 
-[node name="TaskDescriptions" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.0
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions"]
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Description"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/HBoxContainer/TaskDescriptions"]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 14.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer"]
+[node name="Descriptions" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="Title" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Title"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+text = "Task"
+vertical_alignment = 1
 
-[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Title"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="Description" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Description"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Description"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="Objectives" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Objectives"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Objectives"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="XP" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer4"]
+[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/XP"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer4"]
+[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/XP"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="Money" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer5"]
+[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Money"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer5"]
+[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Money"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="Status" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer6"]
+[node name="Key" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Status"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer6"]
+[node name="Value" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/ScrollContainer/Descriptions/Status"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/TaskDescriptions/ScrollContainer/VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/TaskDescriptions"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="AcceptBtn" type="Button" parent="PanelContainer/HBoxContainer/TaskDescriptions/HBoxContainer"]
+[node name="AcceptBtn" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -265,7 +289,7 @@ size_flags_vertical = 7
 text = "Accept
 "
 
-[node name="CounterofferBtn" type="Button" parent="PanelContainer/HBoxContainer/TaskDescriptions/HBoxContainer"]
+[node name="CounterofferBtn" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -273,7 +297,7 @@ size_flags_vertical = 7
 text = "Counteroffer
 "
 
-[node name="DeclineBtn" type="Button" parent="PanelContainer/HBoxContainer/TaskDescriptions/HBoxContainer"]
+[node name="DeclineBtn" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

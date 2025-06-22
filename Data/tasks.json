@@ -1,23 +1,22 @@
 [
   {
 	"id": "alex_batch_1_accept",
-	"title": "Download Alex's Party Mix",
-	"description": "Alex is hosting a party in 3 hours. Help her download 3 songs for her party mix.",
+	"task": "Download Alex's Party Mix",
+	"description": "Alex is hosting a party in 3 hours. Use the CrowLift app to help her download 3 songs for her party mix.",
 	"objectives": [
 	  {
-		"type": "fetch",
-		"target": "key",
-		"location": "mayor_house",
-		"completed": false
+		"type": "download",
+		"target": null,
+		"location": "Crowlift"
 	  }
 	],
 	"rewards": {
-	  "xp": 100,
-	  "gold": 50,
-	  "items": ["mayor_letter"]
+	  "confidence xp": 100,
+	  "money": 50,
+	  "items": []
 	},
 	"status": "not_started",
 	"prerequisites": [],
-	"next_quest": "quest_002"
+	"next_quest": null
   }
 ]
