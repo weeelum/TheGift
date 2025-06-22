@@ -1,8 +1,8 @@
 [
   {
-	"id": "quest_01",
-	"title": "Find the Lost Key",
-	"description": "The mayor lost his key. Search the town and return it.",
+	"id": "alex_batch_1_accept",
+	"title": "Download Alex's Party Mix",
+	"description": "Alex is hosting a party in 3 hours. Help her download 3 songs for her party mix.",
 	"objectives": [
 	  {
 		"type": "fetch",

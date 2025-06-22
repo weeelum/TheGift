@@ -22,6 +22,7 @@ var last_contact_button : Button = null
 func _ready() -> void:
 	## Load conversation states
 	load_state()
+	GameManager.load_tasks()
 	
 	# Connect Close button signal to close the app
 	close_btn.pressed.connect(_on_close_pressed)
@@ -117,11 +118,13 @@ func _on_send_btn_pressed() -> void:
 			continue_conversation(reply.next_id)
 
 
-func continue_conversation(next_id: String) -> void:
+func continue_conversation(next_id: String) -> String:
 	current_node_id = next_id
 	conversation_state[current_contact] = current_node_id
 	save_state()
 	show_current_node()
+	
+	return next_id
 
 
 func load_state():
@@ -146,6 +149,9 @@ func start_mission(next_id : String) -> void:
 	displayed_thread[current_contact] = \
 		displayed_thread.get(current_contact, "") + mission_text
 	
+	print(continue_conversation(next_id))
+	
+	print(GameManager.tasks)
 
 func _on_close_pressed():
 	save_state()
