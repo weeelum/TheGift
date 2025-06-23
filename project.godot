@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 TM="*res://Singletons/TimeManager.gd"
-DialogueManager="res://addons/dialogue_manager/dialogue_manager.gd"
 DD="*res://Data/Singletons/DialogueData.gd"
 SM="*res://Singletons/SaveManager.gd"
 DM="*res://Data/Singletons/DialogueManager.gd"
@@ -26,6 +25,7 @@ SettingsManager="*res://Data/Singletons/SettingsManager.gd"
 TD="*res://Data/Singletons/TrackDatabase.gd"
 PopupManager="*res://Singletons/PopupManager.gd"
 GameManager="*res://Singletons/GameManager.gd"
+Questify="*res://addons/questify/quest_manager.gd"
 
 [display]
 
@@ -40,7 +40,19 @@ project/assembly_name="The Gift"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/quest_resource_translation_parser/plugin.cfg", "res://addons/questify/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "orange",
+"res://Data/": "green",
+"res://Fonts/": "gray",
+"res://Scenes/": "teal",
+"res://Scripts/": "blue",
+"res://Singletons/": "purple",
+"res://addons/": "red"
+}
 
 [gui]
 
@@ -63,6 +75,12 @@ confirm_answer={
 
 locale/translations_pot_files=PackedStringArray("res://Messages/steven.dialogue", "res://Messages/steven 2.dialogue")
 <<<<<<<Updatedupstreamlocale/translations_pot_files=PackedStringArray("res://Messages/steven.dialogue")
+
+[questify]
+
+general/update_polling=true
+general/update_interval=0.5
+general/add_quests_to_pot_generation=false
 
 [rendering]
 
